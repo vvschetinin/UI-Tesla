@@ -208,11 +208,39 @@
       margin-bottom: 1.5rem;
     }
   }
+  .valuation-list{
+    li{
+      display: flex;
+      align-items: center;
+      &+li{
+        margin-top: .7rem;
+      }
+    }
+    .item-title{
+      display: inline-block;
+      min-width: 160px;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      span{
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
   .title-wrap {
     position: relative;
     text-align: right;
     padding-top: 70px;
     padding-right: 100px;
     z-index: 10;
+  }
+  .choice-wrap {
+    position: relative;
+    padding-top: 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
   }
 }
