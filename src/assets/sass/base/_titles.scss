@@ -1,0 +1,28 @@
+.h1-title {
+  font-size: 50px;
+  @include minMedia(576) {
+    font-size: 90px;
+  }
+}
+
+.h2-title {
+  font-size: 50px;
+  display: none;
+  @include minMedia(768) {
+    display: block;
+  }
+  @include minMedia(1200) {
+    font-size: 70px;
+  }
+}
+
+.h3-title {
+  font-size: 25px;
+  @include minMedia(768) {
+    font-size: 30px;
+  }
+}
+
+.title-hidden {
+  display: none;
+}

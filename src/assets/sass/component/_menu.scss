@@ -1,0 +1,116 @@
+.headnav{
+  padding: 15px 0 22px 0;
+  grid-template-columns: 1fr 1fr;
+  @include minMedia(576) {
+    padding: 22px 0;
+  }
+  @include minMedia(992) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .logovrap{
+    padding-left: 10px;
+    @include minMedia(576) {
+      padding-left: 0;
+    }
+  }
+  .mainlink{
+    justify-content: center;
+    align-items: center;
+    li{
+      display: inline-block;
+      position: relative;
+      &+ li{
+        margin-left: 2rem;
+        @include minMedia(1200) {
+          margin-left: 3rem;
+        }
+      }
+    }
+    a{
+      display: inline-block;
+      position: relative;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: normal;
+      transition: all .25s ease;
+      &:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $brand;
+        left: 0;
+        bottom: -5px;
+        transition: all .25s ease;
+      }
+      &.active{
+        color: $brand;
+        &:before{
+          width: 100%;
+        }
+      }
+      &:hover{
+        color: $brand;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .entermenu {
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    @include minMedia(768) {
+      padding-right: 0;
+    }
+    li {
+      display: none;
+      position: relative;
+      @include minMedia(768) {
+        display: inline-block;
+      }
+      &+li {
+        margin-left: 2rem;
+      }
+    }
+    .js-openmenu{
+      display: inline-block;
+      cursor: pointer;
+      @include minMedia(992) {
+        display: none;
+      }
+    }
+    a {
+      display: inline-block;
+      position: relative;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: normal;
+      transition: all .25s ease;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $brand;
+        left: 0;
+        bottom: -5px;
+        transition: all .25s ease;
+      }
+      &.active {
+        color: $brand;
+
+        &:before {
+          width: 100%;
+        }
+      }
+      &:hover {
+        color: $brand;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.s-hero {
+  display: block;
+  padding-top: 30px;
+  height: auto;
+  @include minMedia(576) {
+    padding-top: 65px;
+  }
+  @include minMedia(768) {
+    padding-top: 43px;
+  }
+  @include minMedia(1200) {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 140px);
+    padding-top: 0;
+  }
+  .hero-subtitle {
+    font-weight: 600;
+    display: none;
+    @include minMedia(768) {
+      display: block;
+    }
+  }
+  .hero-bg{
+    margin: 0 auto;
+    margin-top: 0;
+    @include minMedia(576) {
+      margin-top: -15px;
+    }
+    @include minMedia(992) {
+      margin-top: -40px;
+    }
+    @include minMedia(1200) {
+      margin-top: -95px;
+      margin-left: -20px;
+    }
+    @include minMedia(1400) {
+      margin-top: -115px;
+    }
+  }
+}
+

@@ -1,0 +1,68 @@
+html {
+  font-size: 14px;
+  @include minMedia(576) {
+    font-size: $base-font-size;
+  }
+}
+
+body {
+  font-family: $text-font-stack;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: theme_text_color("dark");
+  @include minMedia(576) {
+    font-size: 1rem;
+  }
+}
+
+@include placeholderColor(inherit);
+
+.input-error,
+.form-error {
+  color: theme_text_color("error");
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: theme_text_color("dark");
+  line-height: 1;
+  &.accent {
+    color: theme_text_color("accent");
+  }
+  span {
+    display: block
+  }
+}
+
+p {
+  @extend body;
+  height: auto;
+  &+p {
+    margin-top: .5rem;
+    @include minMedia(800) {
+      margin-top: .7rem;
+    }
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 16px;
+  }
+}
+
+.brand {
+  background: $brand;
+  color: theme_text_color("white");
+  h1,
+  h2,
+  h3,
+  p {
+    color: theme_text_color("white");
+  }
+}
+
+@import "fonts";
+@import "titles";
