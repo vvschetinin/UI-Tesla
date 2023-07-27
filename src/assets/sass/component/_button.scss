@@ -1,5 +1,21 @@
 button, .btn {
   cursor: pointer;
   display: inline-block;
+  transition: all .25s ease;
+}
+
+.btn-accent{
+  @extend .btn;
+  border: 2px solid #FFF;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+  &:hover{
+    background-color: #fff;
+    color: $brand;
+  }
 }
 

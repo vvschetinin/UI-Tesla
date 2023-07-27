@@ -125,7 +125,7 @@
   .future-content{
     position: relative;
     padding: 50px;
-    padding-left: 30px;
+    padding-right: 30px;
     z-index: 10;
   }
   .future-properties{
@@ -133,12 +133,31 @@
     li{
       position: relative;
       display: flex;
+      align-items: center;
       &+li{
         margin-top: 2rem;
       }
     }
+    .icon-wrap{
+      display: inline-block;
+      height: auto;
+      min-width: 45px;
+    }
     .item-content{
       padding-left: 1rem;
+    }
+    h4{
+      font-size: 35px;
+      font-weight: 600;
+      span{
+        display: inline-block;
+        font-size: 20px;
+        padding-left: .3rem;
+      }
+    }
+    .subtitle{
+      font-size: 12px;
+      font-weight: 400;
     }
   }
   .choice-wrap{
@@ -146,5 +165,6 @@
     padding-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
   }
 }
