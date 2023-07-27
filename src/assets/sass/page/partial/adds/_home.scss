@@ -98,7 +98,6 @@
 
 .s-future{
   padding: 0;
-  margin-bottom: 200px;
   overflow: hidden;
   .section-content{
     position: relative;
@@ -128,6 +127,10 @@
     padding: 50px;
     padding-right: 30px;
     z-index: 10;
+    .h3-title {
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
   }
   .future-properties{
     padding-top: 50px;
@@ -167,5 +170,49 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
+  }
+}
+
+// ==========================
+
+.s-safety{
+  padding: 0;
+  margin-bottom: 200px;
+  overflow: hidden;
+  .section-content{
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    height: auto;
+    grid-template-columns: 440px 1fr;
+  }
+  .bg-section {
+    position: absolute;
+    right: 100px;
+    top: 170px;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 15;
+  }
+  .safety-content {
+    position: relative;
+    padding: 50px;
+    padding-right: 30px;
+    height: auto;
+    min-height: 900px;
+    z-index: 10;
+    .h3-title{
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .title-wrap {
+    position: relative;
+    text-align: right;
+    padding-top: 70px;
+    padding-right: 100px;
+    z-index: 10;
   }
 }
