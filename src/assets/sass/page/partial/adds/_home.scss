@@ -99,47 +99,81 @@
 .s-future{
   padding: 0;
   overflow: hidden;
+  margin-bottom: 50px;
   .section-content{
     position: relative;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    display: grid;
+    display: block;
     height: auto;
-    grid-template-columns: 1fr 440px;
+    @include minMedia(992) {
+      display: grid;
+      grid-template-columns: 1fr 440px;
+    }
   }
   .bg-section{
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 55px;
+    bottom: 0;
     width: 100%;
-    max-width: 1250px;
     z-index: 5;
+    @include minMedia(992) {
+      max-width: 1100px;
+      position: absolute;
+    }
   }
   .title-wrap{
     position: relative;
-    padding-top: 70px;
-    padding-left: 100px;
+    padding-top: 20px;
+    padding-left: 0;
+    text-align: center;
     z-index: 10;
+    @include minMedia(576) {
+      padding-top: 70px;
+      padding-left: 100px;
+      text-align: left;
+    }
   }
   .future-content{
     position: relative;
-    padding: 50px;
-    padding-right: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    padding: 40px 20px;
+    margin-top: -15px;
     z-index: 10;
+    @include minMedia(576) {
+      padding: 50px 30px;
+    }
+    @include minMedia(768) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include minMedia(992) {
+      display: block;
+      margin-top: 0;
+      padding: 50px;
+      padding-right: 30px;
+    }
     .h3-title {
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
   }
   .future-properties{
-    padding-top: 50px;
+    padding-top: 0;
+    @include minMedia(992) {
+      padding-top: 50px;
+    }
     li{
       position: relative;
       display: flex;
       align-items: center;
       &+li{
-        margin-top: 2.5rem;
+        margin-top: 1.5rem;
+        @include minMedia(1200) {
+          margin-top: 2.5rem;
+        }
       }
     }
     .icon-wrap{
@@ -166,10 +200,26 @@
   }
   .choice-wrap{
     position: relative;
-    padding-top: 170px;
+    padding-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 20px;
+    li+li{
+      margin-top: 1rem;
+      @include minMedia(410) {
+        margin-top: 0;
+      }
+    }
+    @include minMedia(410) {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 60px;
+    }
+    @include minMedia(1200) {
+      padding-top: 100px;
+    }
+    @include minMedia(1200) {
+      padding-top: 170px;
+    }
   }
 }
 
