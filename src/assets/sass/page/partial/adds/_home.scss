@@ -99,7 +99,6 @@
 .s-future{
   padding: 0;
   overflow: hidden;
-  margin-bottom: 50px;
   .section-content{
     position: relative;
     width: 100%;
@@ -200,7 +199,7 @@
   }
   .choice-wrap{
     position: relative;
-    padding-top: 40px;
+    padding-top: 35px;
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
@@ -212,9 +211,9 @@
     }
     @include minMedia(410) {
       grid-template-columns: 1fr 1fr;
-      padding-top: 60px;
+      padding-top: 40px;
     }
-    @include minMedia(1200) {
+    @include minMedia(992) {
       padding-top: 100px;
     }
     @include minMedia(1200) {
@@ -227,32 +226,69 @@
 
 .s-safety{
   padding: 0;
-  margin-bottom: 200px;
+  padding-top: 40px;
   overflow: hidden;
+  margin-bottom: 5px;
+  @include minMedia(992) {
+    padding-top: 0;
+  }
   .section-content{
     position: relative;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    display: grid;
+    display: block;
     height: auto;
-    grid-template-columns: 440px 1fr;
+    @include minMedia(992) {
+      display: grid;
+      grid-template-columns:440px 1fr;
+    }
   }
   .bg-section {
-    position: absolute;
-    right: 100px;
-    top: 170px;
+    position: relative;
+    left: 0;
+    top: 0;
     width: 100%;
     max-width: 1000px;
     z-index: 15;
+    @include minMedia(992) {
+      position: absolute;
+      top: 250px;
+      left: 330px;
+      max-width: 740px;
+    }
+    @include minMedia(1100) {
+      top: 220px;
+      left: 330px;
+      max-width: 780px;
+    }
+    @include minMedia(1200) {
+      top: 200px;
+      left: 330px;
+      max-width: 870px;
+    }
+    @include minMedia(1400) {
+      left: 330px;
+      max-width: 1000px;
+      top: 170px;
+    }
   }
   .safety-content {
     position: relative;
-    padding: 50px;
-    padding-right: 30px;
+    padding: 40px 20px;
     height: auto;
-    min-height: 900px;
+    min-height: none;
     z-index: 10;
+    @include minMedia(576) {
+      padding: 50px 30px;
+    }
+    @include minMedia(992) {
+      padding: 50px;
+      padding-right: 30px;
+    }
+    @include minMedia(1200) {
+      min-height: 900px;
+    }
     .h3-title{
       line-height: 1.2;
       margin-bottom: 1.5rem;
@@ -287,8 +323,11 @@
     z-index: 10;
   }
   .safety-result{
-    margin-top: 90px;
+    margin-top: 50px;
     align-items: center;
+    @include minMedia(1200) {
+      margin-top: 90px;
+    }
     .result-text{
       font-size: 50px;
       font-weight: 600;
@@ -303,9 +342,26 @@
   }
   .choice-wrap {
     position: relative;
-    padding-top: 90px;
+    padding-top: 35px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 20px;
+    max-width: none;
+    @include minMedia(410) {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 40px;
+    }
+    @include minMedia(768) {
+      max-width: 384px;
+    }
+    @include minMedia(1200) {
+      padding-top: 90px;
+    }
+    li+li{
+      margin-top: 1rem;
+      @include minMedia(410) {
+        margin-top: 0;
+      }
+    }
   }
 }
