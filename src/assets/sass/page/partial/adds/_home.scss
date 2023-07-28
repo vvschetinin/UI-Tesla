@@ -236,9 +236,24 @@
     padding-right: 100px;
     z-index: 10;
   }
+  .safety-result{
+    margin-top: 90px;
+    align-items: center;
+    .result-text{
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1;
+      padding-left: 22px;
+      span{
+        display: block;
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+  }
   .choice-wrap {
     position: relative;
-    padding-top: 170px;
+    padding-top: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
