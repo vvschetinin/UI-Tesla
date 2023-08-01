@@ -185,7 +185,7 @@
       position: relative;
       left: 2.5rem;
       transition: all .3s;
-      @include minMedia(550) {
+      @include minMedia(576) {
         font-size: 36px;
       }&+.menu-item{
         margin-top: 1rem;
