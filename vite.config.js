@@ -5,7 +5,6 @@ import autoprefixer from 'autoprefixer';
 import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 import viteImagemin from '@vheemstra/vite-plugin-imagemin';
 import imageminMozjpeg from 'imagemin-mozjpeg';
-import imageminWebp from 'imagemin-webp';
 import imageminPngquant from 'imagemin-pngquant';
 
 export default defineConfig({
@@ -25,11 +24,6 @@ export default defineConfig({
       plugins: {
         jpg: imageminMozjpeg(),
         png: imageminPngquant()
-      },
-      makeWebp: {
-        plugins: {
-          jpg: imageminWebp(),
-        },
       },
     }),
   ],
